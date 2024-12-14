@@ -370,7 +370,7 @@ const services = [
           english: "Web Development"
       },
       description: {
-          arabic: "تطوير مواقع احترافية باستخدام HTML, CSS, JavaScript وأطر العمل مثل Laravel و React.",
+          arabic: "تطوير مواقع احترافية باستخدام HTML, CSS, JavaScript وأطر العمل مثل Laravel و LiveWire.",
           english: "Develop professional websites using HTML, CSS, JavaScript, and frameworks like Laravel and LiveWire."
       },
       icon: "bi bi-laptop"
