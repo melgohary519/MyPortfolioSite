@@ -928,6 +928,10 @@ section,
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
+  line-height: 30px;
+}
+.services .service-item .arabic-title{
+  direction: rtl;
 }
 
 .services .service-item .title a {
@@ -941,6 +945,7 @@ section,
 .services .service-item .description {
   line-height: 24px;
   font-size: 14px;
+  direction: rtl;
 }
 
 /*--------------------------------------------------------------

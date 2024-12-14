@@ -358,3 +358,148 @@ document.getElementById("testimonial-container").innerHTML = testimonialContaine
   </div>
   `
 ).join('');
+
+
+
+
+
+const services = [
+  {
+      title: {
+          arabic: "تصميم وبرمجة المواقع",
+          english: "Web Development"
+      },
+      description: {
+          arabic: "تطوير مواقع احترافية باستخدام HTML, CSS, JavaScript وأطر العمل مثل Laravel و React.",
+          english: "Develop professional websites using HTML, CSS, JavaScript, and frameworks like Laravel and LiveWire."
+      },
+      icon: "bi bi-laptop"
+  },
+  {
+      title: {
+          arabic: "تطوير تطبيقات الهواتف",
+          english: "Mobile App Development"
+      },
+      description: {
+          arabic: "إنشاء تطبيقات الهواتف بنظامي Android و iOS باستخدام Flutter و Kotlin.",
+          english: "Create mobile apps for Android and iOS using Flutter and Kotlin."
+      },
+      icon: "bi bi-phone"
+  },
+  {
+      title: {
+          arabic: "تصميم تجربة المستخدم",
+          english: "UI/UX Design"
+      },
+      description: {
+          arabic: "تصميم واجهات مستخدم حديثة وجذابة باستخدام أدوات مثل Figma و Adobe XD.",
+          english: "Design modern and attractive user interfaces using tools like Figma and Adobe XD."
+      },
+      icon: "bi bi-palette"
+  },
+  {
+      title: {
+          arabic: "إدارة قواعد البيانات",
+          english: "Database Management"
+      },
+      description: {
+          arabic: "تصميم وإدارة قواعد البيانات باستخدام MySQL و MariaDB.",
+          english: "Design and manage databases using MySQL and MariaDB."
+      },
+      icon: "bi bi-database"
+  },
+  {
+      title: {
+          arabic: "تطوير لوحات التحكم",
+          english: "Admin Dashboards"
+      },
+      description: {
+          arabic: "تصميم لوحات تحكم ديناميكية لإدارة التطبيقات والمواقع بسهولة.",
+          english: "Design dynamic dashboards for managing applications and websites easily."
+      },
+      icon: "bi bi-ui-checks"
+  },
+  {
+      title: {
+          arabic: "تطوير واجهات برمجة التطبيقات",
+          english: "API Development"
+      },
+      description: {
+          arabic: "بناء واجهات برمجة تطبيقات APIs عالية الأداء باستخدام RESTful و GraphQL.",
+          english: "Build high-performance APIs using RESTful and GraphQL."
+      },
+      icon: "bi bi-link-45deg"
+  },
+  {
+      title: {
+          arabic: "حلول التجارة الإلكترونية",
+          english: "E-commerce Solutions"
+      },
+      description: {
+          arabic: "تصميم وتطوير متاجر إلكترونية متكاملة مع أنظمة الدفع والشحن.",
+          english: "Design and develop integrated e-commerce stores with payment and shipping systems."
+      },
+      icon: "bi bi-cart"
+  },
+  {
+      title: {
+          arabic: "تحسين أداء المواقع",
+          english: "SEO and Optimization"
+      },
+      description: {
+          arabic: "تحسين ظهور المواقع في محركات البحث (SEO) وزيادة سرعة التحميل.",
+          english: "Optimize website visibility in search engines (SEO) and increase page load speed."
+      },
+      icon: "bi bi-search"
+  },
+  {
+      title: {
+          arabic: "خدمات الاستضافة والإدارة",
+          english: "Web Hosting & Deployment"
+      },
+      description: {
+          arabic: "تقديم خدمات الاستضافة وإدارة الخوادم بأنظمة Linux و Docker.",
+          english: "Provide hosting services and server management with Linux and Docker systems."
+      },
+      icon: "bi bi-server"
+  },
+  {
+      title: {
+          arabic: "ERP تطوير حلول ",
+          english: "Enterprise Resource Planning"
+      },
+      description: {
+          arabic: "إنشاء وتخصيص أنظمة ERP لإدارة موارد الشركات باستخدام ERPNext.",
+          english: "Create and customize ERP systems for managing business resources using Odoo and ERPNext."
+      },
+      icon: "bi bi-boxes"
+  },
+  {
+      title: {
+          arabic: "خدمات أخرى حسب الطلب",
+          english: "Custom Services"
+      },
+      description: {
+          arabic: "خدمات مخصصة لتلبية احتياجات العملاء، سواء تطوير برمجيات أو تحسينات إضافية.",
+          english: "Custom services to meet client needs, whether it's software development or additional improvements."
+      },
+      icon: "bi bi-sliders"
+  }
+];
+
+
+const servicesContainer = document.getElementById("services-container");
+services.forEach(service => servicesContainer.innerHTML += `
+    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon flex-shrink-0"><i class="${service.icon}"></i></div>
+        <div>
+            <h4 class="title">
+              <span href="" class="stretched-link">${service.title.english}</span>
+              <br>
+              <span href="" class="stretched-link arabic-title">${service.title.arabic}</span>
+            </h4>
+            <p class="description">${service.description.arabic}</p>
+        </div>
+    </div>
+`);
+
