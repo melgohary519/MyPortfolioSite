@@ -453,16 +453,10 @@ const services = [
       icon: "bi bi-search"
   },
   {
-      title: {
-          arabic: "خدمات الاستضافة والإدارة",
-          english: "Web Hosting & Deployment"
-      },
-      description: {
-          arabic: "تقديم خدمات الاستضافة وإدارة الخوادم بأنظمة Linux و Docker.",
-          english: "Provide hosting services and server management with Linux and Docker systems."
-      },
-      icon: "bi bi-server"
-  },
+    title: { arabic: "إدارة السيرفرات", english: "Server Management" },
+    description: { arabic: "إدارة السيرفرات وصيانتها باستخدام أنظمة Linux و Docker.", english: "Managing and maintaining servers using Linux and Docker systems." },
+    icon: "bi bi-server"
+},
   {
       title: {
           arabic: "ERP تطوير حلول ",
@@ -475,6 +469,16 @@ const services = [
       icon: "bi bi-boxes"
   },
   {
+    title: { arabic: "Koha خدمات ", english: "Koha Services" },
+    description: { arabic: "تقديم حلول متكاملة لإدارة المكتبات باستخدام نظام Koha, بما في ذلك التخصيص والتطوير.", english: "Provide integrated library management solutions using Koha, including customization and development." },
+    icon: "bi bi-book"
+},
+{
+    title: { arabic: "DSpace خدمات ", english: "DSpace Services" },
+    description: { arabic: "تطوير وتخصيص أنظمة DSpace لإدارة الأبحاث والمحتوى الرقمي.", english: "Develop and customize DSpace systems for managing research and digital content." },
+    icon: "bi bi-database"
+},
+  {
       title: {
           arabic: "خدمات أخرى حسب الطلب",
           english: "Custom Services"
@@ -484,7 +488,8 @@ const services = [
           english: "Custom services to meet client needs, whether it's software development or additional improvements."
       },
       icon: "bi bi-sliders"
-  }
+  },
+  
 ];
 
 
