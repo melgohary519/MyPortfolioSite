@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -37,7 +37,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -118,7 +118,7 @@
     new Waypoint({
       element: item,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = item.querySelectorAll('.progress .progress-bar');
         progress.forEach(el => {
           el.style.width = el.getAttribute('aria-valuenow') + '%';
@@ -137,13 +137,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -152,8 +152,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -171,7 +171,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -189,7 +189,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -230,17 +230,131 @@
 
 
 
+let professional_skills = [
+
+  // Research & Soft Skills
+  { name: "Research Skills", precent: "95%" },
+  { name: "Web and Social Skills", precent: "90%" },
+
+  // Library Systems
+  { name: "Koha Library System", precent: "90%" },
+  { name: "DSpace", precent: "90%" },
+
+  // ERP & Business Tools
+  { name: "Erpnext", precent: "70%" },
+
+  // Frontend Development
+  { name: "html, css, JavaScript", precent: "90%" },
+  { name: "React.js", precent: "60%" },
+
+  // Backend Development
+  { name: "Laravel", precent: "90%" },
+  { name: "Php", precent: "90%" },
+  { name: "perl", precent: "90%" },
+  { name: "Python programming language", precent: "90%" },
+  { name: "Reset APIs", precent: "90%" },
+  { name: "Kotlin", precent: "70%" },
+  { name: "C# programming language", precent: "90%" },
+  { name: "Java Programming Language", precent: "80%" },
+  { name: "Mongodb", precent: "60%" },
+  { name: "Mysql", precent: "70%" },
+  { name: "Mariadb", precent: "70%" },
+
+  // System Administration & DevOps
+  { name: "Linux Ubuntu", precent: "90%" },
+  { name: "Unix Administration", precent: "80%" },
+  { name: "Bash", precent: "80%" },
+  { name: "DNS", precent: "90%" },
+  { name: "Reqular Expressions", precent: "80%" },
+  { name: "Git & Githup", precent: "90%" },
+  { name: "vim", precent: "90%" },
+  { name: "Linx Administration", precent: "80%" },
+
+  // Media & Design Tools
+  { name: "Adobe Photoshop", precent: "50%" },
+  { name: "Adobe Illustrator", precent: "50%" },
+  { name: "Camtasia", precent: "80%" },
 
 
-// function updateHeroImage() {
-//   const heroImage = document.getElementById('hero-image');
-//   if (window.innerWidth <= 900) {
-//     heroImage.src = 'assets/img/below 900px.png'; // Path to smaller image
-//   } else {
-//     heroImage.src = 'assets/img/hero-bg-me.png'; // Path to larger image
-//   }
-// }
 
-// // Run on page load and window resize
-// window.addEventListener('load', updateHeroImage);
-// window.addEventListener('resize', updateHeroImage);
+];
+
+
+
+const containers = [
+  document.getElementById("skills-container"),
+  document.getElementById("skills-container2")
+];
+const createSkillHTML = (item) => `
+  <div class="progress">
+    <span class="skill"><span>${item.name}</span> <i class="val">${item.precent}</i></span>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar" role="progressbar" aria-valuenow="${item.precent}" aria-valuemin="0" aria-valuemax="100" style="width: ${item.precent};"></div>
+    </div>
+  </div>
+`;
+professional_skills.forEach((skill, index) => {
+  const targetContainer = containers[index % 2];
+  targetContainer.innerHTML += createSkillHTML(skill);
+});
+
+
+
+// Testimonial
+let testimonialContainer = [
+  {
+    name: "Ahmed Alnaasan",
+    evaluation: "عمل رائع واحترافي يعكس خبرته ويحترم المواعيد انصح الجميع بالتعامل معه ، انا سعيد جدا بتجرتبي معه ، وسوف يكون هناك اعمال اخرى بالمستقبل القريب",
+    raing: 5,
+    evaluationUrl: "https://mostaql.com/u/elgohary_0/reviews/8292546"
+  },
+  {
+    name: "محمد فرحان شوك",
+    evaluation: "يستحق ان يكون رفيق نجاحك في مشروعك شخص مميز طموح يجعل من نفسه مميز بكل شي صبور متعاون والاهم من ذلك امين وصادق شكراً لك على كل شي",
+    raing: 5,
+    evaluationUrl: "https://mostaql.com/u/elgohary_0/reviews/6887791"
+  },
+  {
+    name: "Mostafa Samir",
+    evaluation: "تسلم حضرتك وان شاء نتشرف في العمل مره اخري",
+    raing: 5,
+    evaluationUrl: "https://mostaql.com/u/elgohary_0/reviews/6868705"
+  },
+  {
+    name: "Abo Soliman",
+    evaluation: "ممتاز جزاه الله خيرا...انصح بالتعامل معه",
+    raing: 5,
+    evaluationUrl: "https://mostaql.com/u/elgohary_0/reviews/6626621"
+  },
+  {
+    name: "Ahmed Emad",
+    evaluation: "بشمهندس محمد شاطر جدا و متابع جيد جدا معاك خطوه ب خطوه وبيحل كل المشكلات ب بساطه انصح بالتعامل معه",
+    raing: 5,
+    evaluationUrl: "https://mostaql.com/u/elgohary_0/reviews/6331782"
+  },
+  // {
+  //   name: "",
+  //   evaluation: "",
+  //   raing: 5
+  // },
+
+]
+document.getElementById("testimonial-container").innerHTML = testimonialContainer.map(item =>
+  `
+  <div class="swiper-slide">
+      <div class="testimonial-item">
+      <img src="assets/img/testimonials/personal-mail-svgrepo-com.svg" class="testimonial-img" alt="">
+      <h3>${item.name}</h3>
+      <p>
+        <i class="bi bi-quote quote-icon-left"></i>
+        <span>${item.evaluation}</span>
+        <i class="bi bi-quote quote-icon-right"></i>
+        <br>
+        <a href="${item.evaluationUrl}">Click here to valideate evaluation</a>
+      </p>
+      
+      <!-- <h4>Ceo &amp; Founder</h4> -->
+    </div>
+  </div>
+  `
+).join('');
