@@ -127,45 +127,7 @@
     });
   });
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Init isotope layout and filters
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
-    });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
-      filters.addEventListener('click', function () {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
-
-  });
+  
 
   /**
    * Init swiper sliders
@@ -762,3 +724,124 @@ document.getElementById("coursesContainer").innerHTML = courses.map(course =>
     <li>${course.name}</li>
   `
 ).join('');
+
+
+
+
+
+// projects
+let projectsCategory = [
+  {
+    title: "All",
+    filter: "*",
+  },
+  {
+    title: "WebSite",
+    filter: ".filter-web",
+  },
+  {
+    title: "Mobile Apps",
+    filter: ".filter-mobile",
+  },
+  {
+    title: "Erp",
+    filter: ".filter-erp",
+  },
+  {
+    title: "koha",
+    filter: ".filter-koha",
+  },
+  {
+    title: "dspace",
+    filter: ".filter-dspace",
+  }
+]
+document.querySelector("#projects-category").insertAdjacentHTML('beforeend',projectsCategory.map( cat => 
+  `<li data-filter="${cat.filter}" >${cat.title}</li>`
+).join(''));
+document.querySelector("#projects-category li").classList.add("filter-active")
+
+
+let projects = [
+  {
+    name: "ForSkin",
+    desc: "",
+    image: "",
+    videoId: "SMA8t1jBexI",
+    filter: "filter-mobile"
+  }
+]
+
+
+const projectsContainer = document.querySelector("#projectsContainer");
+projects.forEach(project =>{
+  let content = ""
+  if (project.image != "") {
+    content = `
+      <div class="col-lg-4 col-md-6 project-item isotope-item ${project.filter}">
+        <div class="project-content h-100">
+          <img src="${project.image}" class="img-fluid" alt="">
+          <div class="project-info">
+            <!-- <h4>App 1</h4> -->
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+            <a href="assets/img/projects/app-1.jpg" title="App 1" data-gallery="project-gallery-app"
+              class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            <!-- <a href="project-details.html" title="More Details" class="details-link"><i
+                class="bi bi-link-45deg"></i></a> -->
+          </div>
+        </div>
+      </div>
+    `;
+  } else {
+    content = `
+      <div class="col-lg-4 col-md-6 project-item isotope-item ${project.filter}">
+        <div class="project-content h-100">
+          <iframe class="img-fluid" width="100%" height="315" src="https://www.youtube.com/embed/${project.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    `;
+  }
+  projectsContainer.innerHTML += content;
+});
+/**
+   * Initiate glightbox
+   */
+const glightbox = GLightbox({
+  selector: '.glightbox'
+});
+
+
+/**
+ * Init isotope layout and filters
+ */
+document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
+  let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+  let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+  let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+
+  let initIsotope;
+  imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
+    initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+      itemSelector: '.isotope-item',
+      layoutMode: layout,
+      filter: filter,
+      sortBy: sort
+    });
+  });
+
+  isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+    filters.addEventListener('click', function () {
+      if (isotopeItem.querySelector('.isotope-filters .filter-active') != null) {
+        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+      }
+      this.classList.add('filter-active');
+      initIsotope.arrange({
+        filter: this.getAttribute('data-filter')
+      });
+      if (typeof aosInit === 'function') {
+        aosInit();
+      }
+    }, false);
+  });
+
+});
