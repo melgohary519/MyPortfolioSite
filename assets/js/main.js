@@ -1,10 +1,10 @@
 /**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: iPortfolio
+ * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+ * Updated: Jun 29 2024 with Bootstrap v5.3.3
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
 (function () {
   "use strict";
@@ -233,47 +233,134 @@
 let professional_skills = [
 
   // Research & Soft Skills
-  { name: "Research Skills", precent: "95%" },
-  { name: "Web and Social Skills", precent: "90%" },
+  {
+    name: "Research Skills",
+    precent: "95%"
+  },
+  {
+    name: "Web and Social Skills",
+    precent: "90%"
+  },
 
   // Library Systems
-  { name: "Koha Library System", precent: "90%" },
-  { name: "DSpace", precent: "90%" },
+  {
+    name: "Koha Library System",
+    precent: "90%"
+  },
+  {
+    name: "DSpace",
+    precent: "90%"
+  },
 
   // ERP & Business Tools
-  { name: "Erpnext", precent: "70%" },
+  {
+    name: "Erpnext",
+    precent: "70%"
+  },
 
   // Frontend Development
-  { name: "html, css, JavaScript", precent: "90%" },
-  { name: "React.js", precent: "60%" },
+  {
+    name: "html, css, JavaScript",
+    precent: "90%"
+  },
+  {
+    name: "React.js",
+    precent: "60%"
+  },
 
   // Backend Development
-  { name: "Laravel", precent: "90%" },
-  { name: "Php", precent: "90%" },
-  { name: "perl", precent: "90%" },
-  { name: "Python programming language", precent: "90%" },
-  { name: "Reset APIs", precent: "90%" },
-  { name: "Kotlin", precent: "70%" },
-  { name: "C# programming language", precent: "90%" },
-  { name: "Java Programming Language", precent: "80%" },
-  { name: "Mongodb", precent: "60%" },
-  { name: "Mysql", precent: "70%" },
-  { name: "Mariadb", precent: "70%" },
+  {
+    name: "Laravel",
+    precent: "90%"
+  },
+  {
+    name: "Php",
+    precent: "90%"
+  },
+  {
+    name: "perl",
+    precent: "90%"
+  },
+  {
+    name: "Python programming language",
+    precent: "90%"
+  },
+  {
+    name: "Reset APIs",
+    precent: "90%"
+  },
+  {
+    name: "Kotlin",
+    precent: "70%"
+  },
+  {
+    name: "C# programming language",
+    precent: "90%"
+  },
+  {
+    name: "Java Programming Language",
+    precent: "80%"
+  },
+  {
+    name: "Mongodb",
+    precent: "60%"
+  },
+  {
+    name: "Mysql",
+    precent: "70%"
+  },
+  {
+    name: "Mariadb",
+    precent: "70%"
+  },
 
   // System Administration & DevOps
-  { name: "Linux Ubuntu", precent: "90%" },
-  { name: "Unix Administration", precent: "80%" },
-  { name: "Bash", precent: "80%" },
-  { name: "DNS", precent: "90%" },
-  { name: "Reqular Expressions", precent: "80%" },
-  { name: "Git & Githup", precent: "90%" },
-  { name: "vim", precent: "90%" },
-  { name: "Linx Administration", precent: "80%" },
+  {
+    name: "Linux Ubuntu",
+    precent: "90%"
+  },
+  {
+    name: "Unix Administration",
+    precent: "80%"
+  },
+  {
+    name: "Bash",
+    precent: "80%"
+  },
+  {
+    name: "DNS",
+    precent: "90%"
+  },
+  {
+    name: "Reqular Expressions",
+    precent: "80%"
+  },
+  {
+    name: "Git & Githup",
+    precent: "90%"
+  },
+  {
+    name: "vim",
+    precent: "90%"
+  },
+  {
+    name: "Linx Administration",
+    precent: "80%"
+  },
 
   // Media & Design Tools
-  { name: "Adobe Photoshop", precent: "50%" },
-  { name: "Adobe Illustrator", precent: "50%" },
-  { name: "Camtasia", precent: "80%" },
+  {
+    name: "Adobe Photoshop",
+    precent: "50%"
+  },
+  {
+    name: "Adobe Illustrator",
+    precent: "50%"
+  },
+  {
+    name: "Camtasia",
+    precent: "80%"
+  },
 
 
 
@@ -301,8 +388,7 @@ professional_skills.forEach((skill, index) => {
 
 
 // Testimonial
-let testimonialContainer = [
-  {
+let testimonialContainer = [{
     name: "Ahmed Alnaasan",
     evaluation: "عمل رائع واحترافي يعكس خبرته ويحترم المواعيد انصح الجميع بالتعامل معه ، انا سعيد جدا بتجرتبي معه ، وسوف يكون هناك اعمال اخرى بالمستقبل القريب",
     raing: 5,
@@ -363,133 +449,150 @@ document.getElementById("testimonial-container").innerHTML = testimonialContaine
 
 
 
-const services = [
-  {
-      title: {
-          arabic: "تصميم وبرمجة المواقع",
-          english: "Web Development"
-      },
-      description: {
-          arabic: "تطوير مواقع احترافية باستخدام HTML, CSS, JavaScript وأطر العمل مثل Laravel و LiveWire.",
-          english: "Develop professional websites using HTML, CSS, JavaScript, and frameworks like Laravel and LiveWire."
-      },
-      icon: "bi bi-laptop"
+const services = [{
+    title: {
+      arabic: "تصميم وبرمجة المواقع",
+      english: "Web Development"
+    },
+    description: {
+      arabic: "تطوير مواقع احترافية باستخدام HTML, CSS, JavaScript وأطر العمل مثل Laravel و LiveWire.",
+      english: "Develop professional websites using HTML, CSS, JavaScript, and frameworks like Laravel and LiveWire."
+    },
+    icon: "bi bi-laptop"
   },
   {
-      title: {
-          arabic: "تطوير تطبيقات الهواتف",
-          english: "Mobile App Development"
-      },
-      description: {
-          arabic: "إنشاء تطبيقات الهواتف بنظامي Android و iOS باستخدام Flutter و Kotlin.",
-          english: "Create mobile apps for Android and iOS using Flutter and Kotlin."
-      },
-      icon: "bi bi-phone"
+    title: {
+      arabic: "تطوير تطبيقات الهواتف",
+      english: "Mobile App Development"
+    },
+    description: {
+      arabic: "إنشاء تطبيقات الهواتف بنظامي Android و iOS باستخدام Flutter و Kotlin.",
+      english: "Create mobile apps for Android and iOS using Flutter and Kotlin."
+    },
+    icon: "bi bi-phone"
   },
   {
-      title: {
-          arabic: "تصميم تجربة المستخدم",
-          english: "UI/UX Design"
-      },
-      description: {
-          arabic: "تصميم واجهات مستخدم حديثة وجذابة باستخدام أدوات مثل Figma و Adobe XD.",
-          english: "Design modern and attractive user interfaces using tools like Figma and Adobe XD."
-      },
-      icon: "bi bi-palette"
+    title: {
+      arabic: "تصميم تجربة المستخدم",
+      english: "UI/UX Design"
+    },
+    description: {
+      arabic: "تصميم واجهات مستخدم حديثة وجذابة باستخدام أدوات مثل Figma و Adobe XD.",
+      english: "Design modern and attractive user interfaces using tools like Figma and Adobe XD."
+    },
+    icon: "bi bi-palette"
   },
   {
-      title: {
-          arabic: "إدارة قواعد البيانات",
-          english: "Database Management"
-      },
-      description: {
-          arabic: "تصميم وإدارة قواعد البيانات باستخدام MySQL و MariaDB.",
-          english: "Design and manage databases using MySQL and MariaDB."
-      },
-      icon: "bi bi-database"
-  },
-  {
-      title: {
-          arabic: "تطوير لوحات التحكم",
-          english: "Admin Dashboards"
-      },
-      description: {
-          arabic: "تصميم لوحات تحكم ديناميكية لإدارة التطبيقات والمواقع بسهولة.",
-          english: "Design dynamic dashboards for managing applications and websites easily."
-      },
-      icon: "bi bi-ui-checks"
-  },
-  {
-      title: {
-          arabic: "تطوير واجهات برمجة التطبيقات",
-          english: "API Development"
-      },
-      description: {
-          arabic: "بناء واجهات برمجة تطبيقات APIs عالية الأداء باستخدام RESTful و GraphQL.",
-          english: "Build high-performance APIs using RESTful and GraphQL."
-      },
-      icon: "bi bi-link-45deg"
-  },
-  {
-      title: {
-          arabic: "حلول التجارة الإلكترونية",
-          english: "E-commerce Solutions"
-      },
-      description: {
-          arabic: "تصميم وتطوير متاجر إلكترونية متكاملة مع أنظمة الدفع والشحن.",
-          english: "Design and develop integrated e-commerce stores with payment and shipping systems."
-      },
-      icon: "bi bi-cart"
-  },
-  {
-      title: {
-          arabic: "تحسين أداء المواقع",
-          english: "SEO and Optimization"
-      },
-      description: {
-          arabic: "تحسين ظهور المواقع في محركات البحث (SEO) وزيادة سرعة التحميل.",
-          english: "Optimize website visibility in search engines (SEO) and increase page load speed."
-      },
-      icon: "bi bi-search"
-  },
-  {
-    title: { arabic: "إدارة السيرفرات", english: "Server Management" },
-    description: { arabic: "إدارة السيرفرات وصيانتها باستخدام أنظمة Linux و Docker.", english: "Managing and maintaining servers using Linux and Docker systems." },
-    icon: "bi bi-server"
-},
-  {
-      title: {
-          arabic: "ERP تطوير حلول ",
-          english: "Enterprise Resource Planning"
-      },
-      description: {
-          arabic: "إنشاء وتخصيص أنظمة ERP لإدارة موارد الشركات باستخدام ERPNext.",
-          english: "Create and customize ERP systems for managing business resources using Odoo and ERPNext."
-      },
-      icon: "bi bi-boxes"
-  },
-  {
-    title: { arabic: "Koha خدمات ", english: "Koha Services" },
-    description: { arabic: "تقديم حلول متكاملة لإدارة المكتبات باستخدام نظام Koha, بما في ذلك التخصيص والتطوير.", english: "Provide integrated library management solutions using Koha, including customization and development." },
-    icon: "bi bi-book"
-},
-{
-    title: { arabic: "DSpace خدمات ", english: "DSpace Services" },
-    description: { arabic: "تطوير وتخصيص أنظمة DSpace لإدارة الأبحاث والمحتوى الرقمي.", english: "Develop and customize DSpace systems for managing research and digital content." },
+    title: {
+      arabic: "إدارة قواعد البيانات",
+      english: "Database Management"
+    },
+    description: {
+      arabic: "تصميم وإدارة قواعد البيانات باستخدام MySQL و MariaDB.",
+      english: "Design and manage databases using MySQL and MariaDB."
+    },
     icon: "bi bi-database"
-},
-  {
-      title: {
-          arabic: "خدمات أخرى حسب الطلب",
-          english: "Custom Services"
-      },
-      description: {
-          arabic: "خدمات مخصصة لتلبية احتياجات العملاء، سواء تطوير برمجيات أو تحسينات إضافية.",
-          english: "Custom services to meet client needs, whether it's software development or additional improvements."
-      },
-      icon: "bi bi-sliders"
   },
-  
+  {
+    title: {
+      arabic: "تطوير لوحات التحكم",
+      english: "Admin Dashboards"
+    },
+    description: {
+      arabic: "تصميم لوحات تحكم ديناميكية لإدارة التطبيقات والمواقع بسهولة.",
+      english: "Design dynamic dashboards for managing applications and websites easily."
+    },
+    icon: "bi bi-ui-checks"
+  },
+  {
+    title: {
+      arabic: "تطوير واجهات برمجة التطبيقات",
+      english: "API Development"
+    },
+    description: {
+      arabic: "بناء واجهات برمجة تطبيقات APIs عالية الأداء باستخدام RESTful و GraphQL.",
+      english: "Build high-performance APIs using RESTful and GraphQL."
+    },
+    icon: "bi bi-link-45deg"
+  },
+  {
+    title: {
+      arabic: "حلول التجارة الإلكترونية",
+      english: "E-commerce Solutions"
+    },
+    description: {
+      arabic: "تصميم وتطوير متاجر إلكترونية متكاملة مع أنظمة الدفع والشحن.",
+      english: "Design and develop integrated e-commerce stores with payment and shipping systems."
+    },
+    icon: "bi bi-cart"
+  },
+  {
+    title: {
+      arabic: "تحسين أداء المواقع",
+      english: "SEO and Optimization"
+    },
+    description: {
+      arabic: "تحسين ظهور المواقع في محركات البحث (SEO) وزيادة سرعة التحميل.",
+      english: "Optimize website visibility in search engines (SEO) and increase page load speed."
+    },
+    icon: "bi bi-search"
+  },
+  {
+    title: {
+      arabic: "إدارة السيرفرات",
+      english: "Server Management"
+    },
+    description: {
+      arabic: "إدارة السيرفرات وصيانتها باستخدام أنظمة Linux و Docker.",
+      english: "Managing and maintaining servers using Linux and Docker systems."
+    },
+    icon: "bi bi-server"
+  },
+  {
+    title: {
+      arabic: "ERP تطوير حلول ",
+      english: "Enterprise Resource Planning"
+    },
+    description: {
+      arabic: "إنشاء وتخصيص أنظمة ERP لإدارة موارد الشركات باستخدام ERPNext.",
+      english: "Create and customize ERP systems for managing business resources using Odoo and ERPNext."
+    },
+    icon: "bi bi-boxes"
+  },
+  {
+    title: {
+      arabic: "Koha خدمات ",
+      english: "Koha Services"
+    },
+    description: {
+      arabic: "تقديم حلول متكاملة لإدارة المكتبات باستخدام نظام Koha, بما في ذلك التخصيص والتطوير.",
+      english: "Provide integrated library management solutions using Koha, including customization and development."
+    },
+    icon: "bi bi-book"
+  },
+  {
+    title: {
+      arabic: "DSpace خدمات ",
+      english: "DSpace Services"
+    },
+    description: {
+      arabic: "تطوير وتخصيص أنظمة DSpace لإدارة الأبحاث والمحتوى الرقمي.",
+      english: "Develop and customize DSpace systems for managing research and digital content."
+    },
+    icon: "bi bi-database"
+  },
+  {
+    title: {
+      arabic: "خدمات أخرى حسب الطلب",
+      english: "Custom Services"
+    },
+    description: {
+      arabic: "خدمات مخصصة لتلبية احتياجات العملاء، سواء تطوير برمجيات أو تحسينات إضافية.",
+      english: "Custom services to meet client needs, whether it's software development or additional improvements."
+    },
+    icon: "bi bi-sliders"
+  },
+
 ];
 
 
@@ -508,3 +611,154 @@ services.forEach(service => servicesContainer.innerHTML += `
     </div>
 `);
 
+
+
+// Courses
+let courses = [
+  {
+    name: "Mobile Application Android Development",
+    provider: "Russian Culture Center",
+    url: "local"
+  },
+  {
+    name: "Cyber Security",
+    provider: "NTI",
+    url: "local"
+  },
+  {
+    name: "Programming using Python language",
+    provider: "Edraak",
+    url: "https://courses.edraak.org/certificates/53602a7092f84afeb08b19c340b74c77"
+  },
+  {
+    name: "Front End Web Development Professional",
+    provider: "Udacity",
+    url: "https://confirm.udacity.com/DD9ZCWHV"
+  },
+  {
+    name: "Perl 5 Essential Training",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/8bc1be6c643d3d3d0fcac687399d1f279d4978c56264c74520fedabc9aa69c68"
+  },
+  {
+    name: "Web Scraping with Python",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/2dc150b7e9b8226a4768e6b365566eb0d7fc24aef519f025318b9bde1629888b"
+  },
+  {
+    name: "Learning Regular Expressions",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/1ff6ac9467bea637905561f4cd9b1d5ab3f4dc690466806277601bc46f210cab"
+  },
+  {
+    name: "Using Python for Automation",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/003302dad0ea0aa913bdceca512542f55386ac60ee85dc36aa548ad3c7541e78"
+  },
+  {
+    name: "Building RESTful APIs in Laravel",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/108e8c5540cdfe9065bd8881ec8e0706a4ce7772c9cccd5535568bc4c5ff39f5"
+  },
+  {
+    name: "Ubuntu Linux: Essential Commands",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/7c1e9fe47bfab4ca2d03bcbda0f7341a40112de720c9e5ffed244c941076e8c3"
+  },
+  {
+    name: "Learning DNS",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/a8e01922b1650043f9f5d517f4dd8920f9dbf06f23fde121ec448c34d85417f0"
+  },
+  {
+    name: "Learning Vim",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/49de1ab4247ae4d26c3b1f2c34415f82926c1d46cd9701fdd749a0d6247adc29"
+  },
+  {
+    name: "Git Essential Training",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/a42d7b31cb5b322aa7e2033cc5872e1dda0871189dddb613edc6bb250e20e061"
+  },
+  {
+    name: "React Hooks",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/73c313c7b17400106aa8b301cfff6ece847bf0a784b04aa259ad884b6fc906cc"
+  },
+  {
+    name: "Building Modern Projects with React",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/84390c5183005615fefcade086f994afc21f867da63de6b43ae13da75b04af25"
+  },
+  {
+    name: "Building Modern UIs with React Router v6",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/0e6ffbef8a29e3a7c201f1f85df88d3cf34292fe6d8f4de3ebbe02940248a4d8"
+  },
+  {
+    name: "React: Testing and Debugging",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/14b8b6cb4fb4ff19b3a52a6a944a0dc6db5148e9d2c50c6eed42e94c5d2d4d63"
+  },
+  {
+    name: "React.js: Building an Interface",
+    provider: "linkedin",
+    url: "https://www.linkedin.com/learning/certificates/cfda6bdf3e4491811b7e56b4f7d48ce603f715e7569f9f219bb5d7880622969e"
+  },
+  {
+    name: "Php",
+    provider: "Sololearn",
+    url: "https://www.sololearn.com/certificates/CT-I2IL4PC8"
+  },
+  {
+    name: "Introduction to JavaScript",
+    provider: "Sololearn",
+    url: "https://www.sololearn.com/certificates/CC-J07RYNFP"
+  },
+  {
+    name: "The Complete 2022 Flutter & Dart Development Course",
+    provider: "Udemy",
+    url: "https://www.udemy.com/certificate/UC-24d784aa-ff92-4c39-92e7-24c33b3ade8f/"
+  },
+  {
+    name: "CSS - Basics to Adv for front end development",
+    provider: "Udemy",
+    url: "https://www.udemy.com/certificate/UC-c9a6c3ec-bea1-4d2c-ae64-70f255f8ef05/"
+  },
+  {
+    name: "PHP with Laravel for beginners",
+    provider: "Udemy",
+    url: "https://www.udemy.com/certificate/UC-a22c421a-f7e6-4acb-b429-60d977d1c644/"
+  },
+  {
+    name: "The Complete HTML5 Course",
+    provider: "Udemy",
+    url: "https://www.udemy.com/certificate/UC-7a35ca8b-081f-44f4-a5cb-d083ca9efaec/"
+  },
+  {
+    name: "jQuery for Absolute Beginners",
+    provider: "Udemy",
+    url: "https://www.udemy.com/certificate/UC-b230a6d0-e93c-4b4c-a856-08745b11dd26/"
+  },
+  {
+    name: "Creating Video Lessons with Online Video Maker InVideo",
+    provider: "Udemy",
+    url: "https://www.udemy.com/certificate/UC-586c0b1f-52a2-411f-ac20-4e04240826de/"
+  },
+  {
+    name: "How to Install a Free SSL Certificate using Let's Encrypt",
+    provider: "Udemy",
+    url: "https://www.udemy.com/certificate/UC-5aec72af-99bd-4e21-ac44-6a870869a17c/"
+  },
+  {
+    name: "Linode: Foundations of Web Server Security",
+    provider: "Udemy",
+    url: "https://www.udemy.com/certificate/UC-a876abca-6b7c-4bd5-8496-dee888663978/"
+  },
+]
+
+document.getElementById("coursesContainer").innerHTML = courses.map(course =>
+  `
+    <li>${course.name}</li>
+  `
+).join('');
