@@ -855,11 +855,12 @@ section,
 
 .project .project-content .project-info .preview-link,
 .project .project-content .project-info .details-link {
-  position: absolute;
-  left: calc(50% - 40px);
-  font-size: 26px;
-  top: calc(50% - 14px);
-  color: #fff;
+  /* position: absolute;
+  left: calc(50% - 40px); */
+  /* font-size: 26px; */
+  font-size: 400% !important;
+  /* top: calc(50% - 14px);
+  color: #fff; */
   transition: 0.3s;
   line-height: 1.2;
 }
@@ -1336,4 +1337,8 @@ section,
 .container {
   margin: 0 !important;
   padding: 0 5% !important;
+}
+
+iframe{
+  aspect-ratio: 16/9;
 }

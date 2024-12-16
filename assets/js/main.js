@@ -127,7 +127,7 @@
     });
   });
 
-  
+
 
   /**
    * Init swiper sliders
@@ -576,8 +576,7 @@ services.forEach(service => servicesContainer.innerHTML += `
 
 
 // Courses
-let courses = [
-  {
+let courses = [{
     name: "Mobile Application Android Development",
     provider: "Russian Culture Center",
     url: "local"
@@ -730,8 +729,7 @@ document.getElementById("coursesContainer").innerHTML = courses.map(course =>
 
 
 // projects
-let projectsCategory = [
-  {
+let projectsCategory = [{
     title: "All",
     filter: "*",
   },
@@ -756,61 +754,159 @@ let projectsCategory = [
     filter: ".filter-dspace",
   }
 ]
-document.querySelector("#projects-category").insertAdjacentHTML('beforeend',projectsCategory.map( cat => 
+document.querySelector("#projects-category").insertAdjacentHTML('beforeend', projectsCategory.map(cat =>
   `<li data-filter="${cat.filter}" >${cat.title}</li>`
 ).join(''));
 document.querySelector("#projects-category li").classList.add("filter-active")
 
 
-let projects = [
-  {
+let projects = [{
     name: "ForSkin",
-    desc: "",
-    image: "",
-    videoId: "SMA8t1jBexI",
+    desc: `
+      <div dir="rtl">
+        <p><strong>فور سكن لمنتجات العناية بحمالك</strong></p>
+        <p>هو المكان الذي تحتاجه</p>
+        <p>يتفوق فيه كل منتجات العناية الأصلية والمستوردة بسعر الجملة وأرخص الأسعار على الإطلاق،</p>
+        <p>وحصريا لأول مرة بالمنطقة العربية حيث يمكنك التعرف على طريقة عرضه لكل منتج بشكل حصري وأمام عملاء تقدم تجربة تسوق فريدة ومتميزة، فور سكن. يضم مجموعة من الخبراء المتخصصين في مجال العناية والصحة والجمال.</p>
+        <p>ماركات عالمية للمكياجات منتجات العناية بالبشرة والشعر. منتجات فرنسية أصلية بأعلى جودة وأرخص الأسعار.</p>
+        <p>فور سكن خبار العناية بحمالك.</p>
+      </div>
+    `,
+    images: [
+
+    ],
+    videos: [
+      "SMA8t1jBexI"
+    ],
     filter: "filter-mobile"
-  },{
+  },
+  {
     name: "برنامج ادارة المتاجر الالكترونية",
-    desc: "",
-    image:"./assets/img/projects/eshop/image1.png",
+    desc: `
+  <h3 dir="rtl">  هو برنامج تم تصميمه ليناسب جميع احتياجات المتاجر ليسهل عملية البيع والشراء واعداد التقارير والمتابعة اللازمة لمشروعك بشكل الكتروني</h3>
+  <h3 dir="rtl">  مميزات البرنامج</h3>
+  <ul dir="rtl">
+      <li>البرنامج قابل للتطوير والتحسين حيث انه تم الاعتماد علي لغات برمجة مفتوحة المصدر والتي يتم تطويرها من قبل المبرمجين في جميع انحاء العالم.</li>
+      <li>المرونة وامكانية التحديث المستمر ليواكب التغييرات التي تتم في مجال ادارة المتاجر الالكترونية من ربط الفواتير بمصلحة الضرائب.الخ...</li>
+      <li>يشتمل علي المديولات الاساسية للمتاجر من البيع والشراء والمنتجات وادراة مستخدمين النظام والصلاحيات والموظفين ودفع الرواتب والاذون المالية المنصرفة من كهرباء او ايجار او اي شئ اخر.</li>
+      <li>امكانية استخدام النظام لاكثر من مجال مثل السوبر ماركت او محل بيع تليفونات او مستلزمات الكمبيوتر او المستلزمات الصحية او مستلزمات التجميل الخ...</li>
+      <li>تم بناء البرنامج باقدم واقوي لغة من لغات البرمجة المستخدمة في مجال الويب وهي php</li>
+      <li>الاعتماد علي السيرفرات اللينكس والتي توفر حماية وسرعة اكبر من الويندوز</li>
+      <li>توفير حماية الموقع باستخدام ال ssl certificate لتحويل جميع الطلبات الي https ولكي يتعرف جوجل علي الموقع بأنه موقع آمن ويمكنك ملاحظة ذالك من علامة القفل بجانب العنوان في جوجل وستظهر رسالة من جوجل بأن الموقع آمن.</li>
+      <li>البرنامج مبني علي الويب حتي يتسني لك الوصول اليه من جميع الاجهزة سواء كمبيوتر او لاب توب او هاتف او تابلت او شاشة الكاشير او اي جهاز يمكنه الاتصال بالانترنت سواء من البيت او من اي مكان في العالم.</li>
+      <li>البرنامج rsponsive ويناسب جميع احجام الشاشات بدون اي اخطاء.</li>
+      <li>امكانيةتوفير دومين للنسخة الخاصة بك تحت الدومين الرئيسي mr-elgohary علي سبيل المثال ali-shop.mr-elgohary.com وهكذا ويكون حجز الدومين بالاسبقية في الاشتراك</li>
+      <li>متاح شراء البرنامج بالاكواد مفتوحة المصدر حتي يتسني لك التطوير عليه من قبل مبرمج اخر.</li>
+    </ul>    `,
+    images: [
+      "./assets/img/projects/eshop/image1.png",
+      "./assets/img/projects/eshop/image2.jpg",
+      "./assets/img/projects/eshop/image3.jpg",
+      "./assets/img/projects/eshop/image4.jpg",
+      "./assets/img/projects/eshop/image5.jpg",
+      "./assets/img/projects/eshop/image6.jpg",
+      "./assets/img/projects/eshop/image7.jpg",
+      "./assets/img/projects/eshop/image8.jpg",
+      "./assets/img/projects/eshop/image9.jpg",
+      "./assets/img/projects/eshop/image11.jpg",
+      "./assets/img/projects/eshop/image11.jpg",
+      "./assets/img/projects/eshop/image12.jpg",
+      "./assets/img/projects/eshop/image13.jpg",
+      "./assets/img/projects/eshop/image14.jpg",
+      "./assets/img/projects/eshop/image15.jpg",
+    ],
+    videos: [
+
+    ],
     filter: "filter-web"
   }
 ]
 
 
 const projectsContainer = document.querySelector("#projectsContainer");
-projects.forEach(project =>{
+projects.forEach((project, i) => {
   let content = ""
-  if (project.image != "") {
-    content = `
-      <div class="col-lg-4 col-md-6 project-item isotope-item ${project.filter}">
-        <div class="project-content h-100">
-          <img src="${project.image}" class="img-fluid" alt="">
-          <div class="project-info">
-            <!-- <h4>App 1</h4> -->
-            <p>${project.name}</p>
-            <a href="${project.image}" title="App 1" data-gallery="project-gallery-app"
-              class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="project-details.html" title="More Details" class="details-link"><i
-                class="bi bi-link-45deg"></i></a>
-          </div>
-        </div>
-      </div>
-    `;
-  } else {
-    content = `
-      <div class="col-lg-4 col-md-6 project-item isotope-item ${project.filter}">
-        <div class="project-content h-100">
-          <iframe class="img-fluid" width="100%" height="315" src="https://www.youtube.com/embed/${project.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    `;
+  if (project.images.length > 0) {
+    content = `<img src="${project.images[0]}" class="img-fluid" alt="" >`;
+  } else if (project.videos.length > 0) {
+    content = `<iframe class="img-fluid" width="100%" height="315" src="https://www.youtube.com/embed/${project.videos[0]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   }
-  projectsContainer.innerHTML += content;
+  projectsContainer.innerHTML += `
+    <div class="col-lg-4 col-md-6 project-item isotope-item ${project.filter}">
+      <div class="project-content h-100">
+        ${content}
+        <div class="project-info align-items-center d-flex justify-content-center">
+          <!-- <h4>App 1</h4> -->
+          <p>${project.name}</p>
+          <a href="" title="More Details" 
+              class="details-link" 
+              data-bs-toggle="modal" data-bs-target="#projectModal"
+              data-bs-project=${i}
+              >
+              <i class="bi bi-link-45deg"></i></a>
+        </div>
+      </div>
+    </div>
+  `;
 });
+
+
+const projectModal = document.getElementById('projectModal')
+if (projectModal) {
+  projectModal.addEventListener('show.bs.modal', event => {
+    const button = event.relatedTarget
+    const projectIndex = button.getAttribute('data-bs-project')
+    const project = projects[projectIndex];
+
+    projectModal.querySelector('.modal-title').textContent = project.name
+
+    const indicators = projectModal.querySelector("#carouselProjectIndicators .carousel-indicators");
+    const inner = projectModal.querySelector("#carouselProjectIndicators .carousel-inner");
+    const modalBodyOtherContent = projectModal.querySelector("#otherContent");
+
+    modalBodyOtherContent.innerHTML = "";
+    inner.innerHTML = "";
+    indicators.innerHTML = "";
+    let index = 0
+    project.images.forEach((v, i) => {
+      if (v != "") {
+        indicators.innerHTML += `<button type="button" data-bs-target="#carouselProjectIndicators" data-bs-slide-to="${index}" class="bg-danger" aria-current="true" aria-label="Slide ${index+1}"></button>`;
+        inner.innerHTML += `
+          <div class="carousel-item">
+            <img src="${v}" class="d-block w-100" alt="...">
+          </div>
+        `;
+        index++;
+      }
+    });
+    project.videos.forEach((v, i) => {
+      if (v != "") {
+        indicators.innerHTML += `<button type="button" data-bs-target="#carouselProjectIndicators" data-bs-slide-to="${index}" class="bg-danger" aria-current="true" aria-label="Slide ${index+1}"></button>`;
+        inner.innerHTML += `
+          <div class="carousel-item">
+            <iframe class="img-fluid" width="100%" height="auto" src="https://www.youtube.com/embed/${v}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        `;
+        index++;
+      }
+    });
+    document.querySelector("#carouselProjectIndicators .carousel-inner .carousel-item").classList.add("active");
+    document.querySelector("#carouselProjectIndicators .carousel-indicators button").classList.add("active");
+
+    modalBodyOtherContent.innerHTML += `
+      <h1 class="text-center mt-5">${project.name}</h1>
+      <p class="mt-5" style=" font-size: 21px; text-align: justify; ">${project.desc}</p>
+    `;
+
+  })
+}
+
+
+
+
 /**
-   * Initiate glightbox
-   */
+ * Initiate glightbox
+ */
 const glightbox = GLightbox({
   selector: '.glightbox'
 });
