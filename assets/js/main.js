@@ -769,6 +769,11 @@ let projects = [
     image: "",
     videoId: "SMA8t1jBexI",
     filter: "filter-mobile"
+  },{
+    name: "برنامج ادارة المتاجر الالكترونية",
+    desc: "",
+    image:"./assets/img/projects/eshop/image1.png",
+    filter: "filter-web"
   }
 ]
 
@@ -783,11 +788,11 @@ projects.forEach(project =>{
           <img src="${project.image}" class="img-fluid" alt="">
           <div class="project-info">
             <!-- <h4>App 1</h4> -->
-            <p>Lorem ipsum, dolor sit amet consectetur</p>
-            <a href="assets/img/projects/app-1.jpg" title="App 1" data-gallery="project-gallery-app"
+            <p>${project.name}</p>
+            <a href="${project.image}" title="App 1" data-gallery="project-gallery-app"
               class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <!-- <a href="project-details.html" title="More Details" class="details-link"><i
-                class="bi bi-link-45deg"></i></a> -->
+            <a href="project-details.html" title="More Details" class="details-link"><i
+                class="bi bi-link-45deg"></i></a>
           </div>
         </div>
       </div>
