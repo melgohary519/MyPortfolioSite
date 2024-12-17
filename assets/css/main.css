@@ -1355,12 +1355,28 @@ iframe{
       background-image: url('../img/below\ 400px.png');
       /* height: 300px; */
     }
+    #hero{
+      background: #ecedee !important ;
+    }
     #hero .container{
       text-align: center;
-      bottom: 20%;
+      width: 100%;
     }
     #hero h2{
       font-size: 8vw !important;
     }
-    
+    #imageformoblie{
+      display: block !important;
+    }
+    #hero .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
+  }
+#imageformoblie{
+  display: none;
+    width: 52%;
+    height: auto;
+    margin-bottom: 10%;
+}
