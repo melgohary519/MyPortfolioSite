@@ -557,7 +557,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  /* background: color-mix(in srgb, var(--background-color), transparent 70%); */
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1283,6 +1283,11 @@ section,
   padding: 0 !important;
   min-height: auto !important;
   background-color: #e9e5e5;
+  color: #484848 !important;
+}
+
+#hero *{
+  color: #484848 !important;
 }
 
 #hero img{
@@ -1332,7 +1337,7 @@ iframe{
   font-size: 5vw !important;
 }
 #hero p{
-  font-size: 4vw !important;
+  font-size: 3vw !important;
 }
 
 @media only screen and (min-device-width: 741px) and (max-device-width: 900px){
@@ -1348,7 +1353,7 @@ iframe{
 @media only screen and (min-device-width: 201px) and (max-device-width: 500px){
     #hero {
       background-image: url('../img/below\ 400px.png');
-      height: 300px;
+      /* height: 300px; */
     }
     #hero .container{
       text-align: center;
