@@ -1354,7 +1354,7 @@ iframe{
 @media only screen and (min-device-width: 201px) and (max-device-width: 500px){
     #hero{
       background: #ecedee !important ;
-      height: 400px;
+      height: 450px;
     }
     #hero .container{
       text-align: center;
@@ -1372,9 +1372,12 @@ iframe{
       align-items: center;
   }
   }
-#imageformoblie{
+#imageformoblie {
   display: none;
-    width: 52%;
-    height: auto;
-    margin-bottom: 10%;
+  width:  52%;
+  height: auto;
+  margin-bottom: 10%;
+  border: 5px solid #83878b;
+  border-radius: 10%;
+  object-fit: cover;
 }
