@@ -819,7 +819,35 @@ let projects = [{
 
     ],
     filter: "filter-web"
-  }
+  },
+  {
+    name:"برنامج ادارة سنتر تعليمي",
+    desc: `
+      <p dir="rtl">
+        برنامج ادارة سنتر تعليمي يشتمل علي ملفات pdf وفيديوهات واختبارات وال homework للطلاب بالاضافة الي صلاحيات لكل طالب علي المواد المشترك بها فقط واتاحة مراجعة الاسئلة من قبل المعلم او المدرس وتظهر للطالب النتيجة بعد التصحيح في حالة اذا كان الاختبار مقالي, اما اذا كان الاختبار صح وغلط او اختياري يتم تصحيحه اتوماتيك من قبل النظام, مع اتاحة امكانية رفع الطلاب والاسئلة باستخدام ملف اكسل, وتوفير api لربط النظام بتطبيق اندرويد و ios
+      </p>
+    `,
+    videos: [
+
+    ],
+    images: [
+      "./assets/img/projects/speedAndSuccessCompany/1.png",
+      "./assets/img/projects/speedAndSuccessCompany/2.png",
+      "./assets/img/projects/speedAndSuccessCompany/3.png",
+      "./assets/img/projects/speedAndSuccessCompany/4.png",
+      "./assets/img/projects/speedAndSuccessCompany/5.png",
+      "./assets/img/projects/speedAndSuccessCompany/6.png",
+      "./assets/img/projects/speedAndSuccessCompany/7.png",
+      "./assets/img/projects/speedAndSuccessCompany/8.png",
+      "./assets/img/projects/speedAndSuccessCompany/9.png",
+      "./assets/img/projects/speedAndSuccessCompany/10.png",
+      "./assets/img/projects/speedAndSuccessCompany/11.png",
+      "./assets/img/projects/speedAndSuccessCompany/12.png",
+      "./assets/img/projects/speedAndSuccessCompany/13.png",
+      "./assets/img/projects/speedAndSuccessCompany/14.png"
+    ],
+    filter: "filter-web"
+  },
 ]
 
 
