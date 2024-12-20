@@ -848,6 +848,24 @@ let projects = [{
     ],
     filter: "filter-web"
   },
+  {
+    name: "Sajjology",
+    desc: `
+      <p dir="ltr">
+      
+          It is an application affiliated with the Seogology educational platform that specializes in creating educational courses for university students.
+
+          The application is characterized by ease of use, quick response, and smooth viewing of lectures without interruption, and you can watch at any time.
+
+      </p>
+    `,
+    images:[
+    ],
+    videos: [
+      "LiaFwhWNdpQ"
+    ],
+    filter: "filter-mobile"
+  },
 ]
 
 
