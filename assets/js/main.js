@@ -866,7 +866,7 @@ let projects = [{
     ],
     filter: "filter-mobile"
   },{
-    name:"برنامج ERP لادارة شركة خير النيل",
+    name:"ERP لادارة شركة خير النيل",
     desc: `
       <p dir="rtl">
         <p dir="rtl">شركة النيل لتجارة المواد الغذائية في دولة الإمارات العربية المتحدة، تُعد من الشركات الرائدة في مجال توريد المواد الغذائية بكافة أنواعها، مستهدفة تلبية احتياجات المطاعم، الهايبر ماركت، والسوبر ماركت.</p>
@@ -947,7 +947,7 @@ function renderProjects(filter) {
             <a href="" title="More Details" 
                 class="details-link" 
                 data-bs-toggle="modal" data-bs-target="#projectModal"
-                data-bs-project=${i}
+                data-bs-project="${project.name}"
                 >
                 <i class="bi bi-link-45deg"></i></a>
           </div>
@@ -974,9 +974,9 @@ const projectModal = document.getElementById('projectModal')
 if (projectModal) {
   projectModal.addEventListener('show.bs.modal', event => {
     const button = event.relatedTarget
-    const projectIndex = button.getAttribute('data-bs-project')
-    const project = projects[projectIndex];
-
+    const projectName = button.getAttribute('data-bs-project')
+    const project = projects.filter(item => item.name == projectName)[0];
+    
     projectModal.querySelector('.modal-title').textContent = project.name
 
     const indicators = projectModal.querySelector("#carouselProjectIndicators .carousel-indicators");
