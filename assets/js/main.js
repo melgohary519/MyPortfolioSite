@@ -865,6 +865,26 @@ let projects = [{
       "LiaFwhWNdpQ"
     ],
     filter: "filter-mobile"
+  },{
+    name:"برنامج ERP لادارة شركة خير النيل",
+    desc: `
+      <p dir="rtl">
+        <p dir="rtl">شركة النيل لتجارة المواد الغذائية في دولة الإمارات العربية المتحدة، تُعد من الشركات الرائدة في مجال توريد المواد الغذائية بكافة أنواعها، مستهدفة تلبية احتياجات المطاعم، الهايبر ماركت، والسوبر ماركت.</p>
+        <p dir="rtl">تلتزم الشركة بتقديم أعلى مستويات الجودة بأسعار تنافسية، مع التركيز على استيراد المنتجات المصرية المميزة ذات الجودة العالية.</p>
+        <p dir="rtl">نحرص على خدمة عملائنا في جميع أنحاء دولة الإمارات العربية المتحدة، بما يضمن رضاهم واستمرارية شراكتنا معهم.</p>
+      </p>
+    `,
+    videos: [
+
+    ],
+    images: [
+      "./assets/img/projects/khieralniel/image1.png",
+      "./assets/img/projects/khieralniel/image2.png",
+      "./assets/img/projects/khieralniel/image3.png",
+      "./assets/img/projects/khieralniel/image4.png",
+      "./assets/img/projects/khieralniel/image5.png"
+    ],
+    filter: "filter-erp"
   },
 ]
 
