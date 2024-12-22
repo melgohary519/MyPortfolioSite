@@ -735,23 +735,23 @@ let projectsCategory = [{
   },
   {
     title: "WebSite",
-    filter: ".filter-web",
+    filter: "filter-web",
   },
   {
     title: "Mobile Apps",
-    filter: ".filter-mobile",
+    filter: "filter-mobile",
   },
   {
     title: "Erp",
-    filter: ".filter-erp",
+    filter: "filter-erp",
   },
   {
     title: "koha",
-    filter: ".filter-koha",
+    filter: "filter-koha",
   },
   {
     title: "dspace",
-    filter: ".filter-dspace",
+    filter: "filter-dspace",
   }
 ]
 document.querySelector("#projects-category").insertAdjacentHTML('beforeend', projectsCategory.map(cat =>
@@ -889,32 +889,47 @@ let projects = [{
 ]
 
 
-const projectsContainer = document.querySelector("#projectsContainer");
-projects.forEach((project, i) => {
-  let content = ""
-  if (project.images.length > 0) {
-    content = `<img src="${project.images[0]}" class="img-fluid" alt="" >`;
-  } else if (project.videos.length > 0) {
-    content = `<iframe class="img-fluid" width="100%" height="315" src="https://www.youtube.com/embed/${project.videos[0]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-  }
-  projectsContainer.innerHTML += `
-    <div class="col-lg-4 col-md-6 project-item isotope-item ${project.filter}">
-      <div class="project-content h-100">
-        ${content}
-        <div class="project-info align-items-center d-flex justify-content-center">
-          <!-- <h4>App 1</h4> -->
-          <p>${project.name}</p>
-          <a href="" title="More Details" 
-              class="details-link" 
-              data-bs-toggle="modal" data-bs-target="#projectModal"
-              data-bs-project=${i}
-              >
-              <i class="bi bi-link-45deg"></i></a>
+function renderProjects(filter) {
+  projectsContainer.innerHTML = "";
+  list = filter == "*" ? projects : projects.filter(item => item.filter == filter)
+  list.forEach((project, i) => {
+    let content = ""
+    if (project.images.length > 0) {
+      content = `<img src="${project.images[0]}" class="img-fluid" alt="" >`;
+    } else if (project.videos.length > 0) {
+      content = `<iframe class="img-fluid" width="100%" height="315" src="https://www.youtube.com/embed/${project.videos[0]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    }
+    projectsContainer.innerHTML += `
+      <div class="col-lg-4 col-md-6 project-item isotope-item ${project.filter}">
+        <div class="project-content h-100">
+          ${content}
+          <div class="project-info align-items-center d-flex justify-content-center">
+            <!-- <h4>App 1</h4> -->
+            <p>${project.name}</p>
+            <a href="" title="More Details" 
+                class="details-link" 
+                data-bs-toggle="modal" data-bs-target="#projectModal"
+                data-bs-project=${i}
+                >
+                <i class="bi bi-link-45deg"></i></a>
+          </div>
         </div>
       </div>
-    </div>
-  `;
+    `;
+  });
+}
+const projectsContainer = document.querySelector("#projectsContainer");
+renderProjects("*");  
+
+const projectItems = document.querySelectorAll("#projects-category li");
+projectItems.forEach(li => {
+  li.addEventListener('click',function(){
+    projectItems.forEach(item => item.classList.remove('filter-active'));
+    li.classList.add("filter-active");
+    renderProjects(li.getAttribute("data-filter"));
+  });
 });
+
 
 
 const projectModal = document.getElementById('projectModal')
@@ -981,34 +996,34 @@ const glightbox = GLightbox({
 /**
  * Init isotope layout and filters
  */
-document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
-  let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-  let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-  let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+// document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
+//   let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+//   let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+//   let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
-  let initIsotope;
-  imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
-    initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-      itemSelector: '.isotope-item',
-      layoutMode: layout,
-      filter: filter,
-      sortBy: sort
-    });
-  });
+//   let initIsotope;
+//   imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
+//     initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+//       itemSelector: '.isotope-item',
+//       layoutMode: layout,
+//       filter: filter,
+//       sortBy: sort
+//     });
+//   });
 
-  isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
-    filters.addEventListener('click', function () {
-      if (isotopeItem.querySelector('.isotope-filters .filter-active') != null) {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-      }
-      this.classList.add('filter-active');
-      initIsotope.arrange({
-        filter: this.getAttribute('data-filter')
-      });
-      if (typeof aosInit === 'function') {
-        aosInit();
-      }
-    }, false);
-  });
+//   isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+//     filters.addEventListener('click', function () {
+//       if (isotopeItem.querySelector('.isotope-filters .filter-active') != null) {
+//         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+//       }
+//       this.classList.add('filter-active');
+//       initIsotope.arrange({
+//         filter: this.getAttribute('data-filter')
+//       });
+//       if (typeof aosInit === 'function') {
+//         aosInit();
+//       }
+//     }, false);
+//   });
 
-});
+// });
